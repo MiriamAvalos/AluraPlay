@@ -1,3 +1,4 @@
+/*cabecera*/
 .cabecera__container {
     display: flex;
    justify-content: space-around;
@@ -8,11 +9,61 @@
 
 .cabecera__buscar__item{
     display: none;
+    
+}
+     /*Menu*/
+.menu__container{
+   position: fixed;
+     /*coloca el contenedor en la parte inferior de la pagina*/
+   bottom: 0%;
+   height: 75px;
+   width: 100%;
+}
+
+.menu__lista{
+    display:flex;
+}
+
+     /*ocultar elementos de una lista, se especifica el numero de la lista que quiero ocultar*/
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+ display: none;
+}
+
+
+
+/*seccion superior*/
+.superior__seccion__container{
+    /*un elemento al lado de otro*/
+display: flex;
+    /*alinear elementos al centro del contenedor*/
+align-items: center;
+    /*que el texto no se divida en renglones*/
+    white-space: nowrap;
+        /*agregar un scroll para que se vean los elementos que caben en el conteneor*/
+        overflow: scroll;
+               /*dar espacio entre los elementos hijos para que no esten pegados*/
+               gap: 1em;
+}
+
+
+/*rodapie*/
+.rodapie__container{
+    display: flex;
+   /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
+
 }
 
 @media (min-width:834px) {
-
+/*cabecera*/
     .cabecera__buscar__item{
         display: block;
+    }
+/*rodapie*/
+    .rodapie__container{
+        justify-content: space-between;
     }
 }
