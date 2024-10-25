@@ -22,6 +22,15 @@
 
 .menu__lista{
     display:flex;
+    /*espacio entre cada uno de los elementos*/
+    justify-content: space-around;
+    height: 100%;
+
+}
+
+.menu__lista li{
+ /*alinear elementos li al centro del contenedor, se aplica a los elementos que deseas alinear, no al padre*/
+    align-self: center;
 }
 
      /*ocultar elementos de una lista, se especifica el numero de la lista que quiero ocultar*/
@@ -31,7 +40,11 @@
  display: none;
 }
 
-
+.menu__itens{
+display:flex;
+flex-direction: column;
+gap:5px;
+}
 
 /*seccion superior*/
 .superior__seccion__container{
@@ -66,4 +79,22 @@ align-items: center;
     .rodapie__container{
         justify-content: space-between;
     }
+ 
+    /*menu*/
+
+    .menu__container{
+        left: 0;
+        height: auto;
+        width: 74px;
+       top:80px;
+     }
+
+
+     .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+      
+     }
 }
